@@ -1,0 +1,28 @@
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\obj\Debug\net6.0\Day 1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\obj\Debug\net6.0\Day 1.AssemblyInfoInputs.cache
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\obj\Debug\net6.0\Day 1.AssemblyInfo.cs
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\obj\Debug\net6.0\Day 1.csproj.CoreCompileInputs.cache
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\bin\Debug\net6.0\Day 1.exe
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\bin\Debug\net6.0\Day 1.deps.json
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\bin\Debug\net6.0\Day 1.runtimeconfig.json
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\bin\Debug\net6.0\Day 1.dll
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\bin\Debug\net6.0\Day 1.pdb
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\obj\Debug\net6.0\Day 1.dll
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\obj\Debug\net6.0\refint\Day 1.dll
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\obj\Debug\net6.0\Day 1.pdb
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\obj\Debug\net6.0\Day 1.genruntimeconfig.cache
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\obj\Debug\net6.0\ref\Day 1.dll
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\bin\Debug\net6.0\Day 1.exe
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\bin\Debug\net6.0\Day 1.deps.json
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\bin\Debug\net6.0\Day 1.runtimeconfig.json
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\bin\Debug\net6.0\Day 1.dll
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\bin\Debug\net6.0\Day 1.pdb
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\obj\Debug\net6.0\Day 1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\obj\Debug\net6.0\Day 1.AssemblyInfoInputs.cache
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\obj\Debug\net6.0\Day 1.AssemblyInfo.cs
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\obj\Debug\net6.0\Day 1.csproj.CoreCompileInputs.cache
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\obj\Debug\net6.0\Day 1.dll
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\obj\Debug\net6.0\refint\Day 1.dll
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\obj\Debug\net6.0\Day 1.pdb
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\obj\Debug\net6.0\Day 1.genruntimeconfig.cache
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\obj\Debug\net6.0\ref\Day 1.dll

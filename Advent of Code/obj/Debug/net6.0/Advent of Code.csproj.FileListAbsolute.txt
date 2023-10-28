@@ -1,0 +1,14 @@
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\bin\Debug\net6.0\Advent of Code.exe
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\bin\Debug\net6.0\Advent of Code.deps.json
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\bin\Debug\net6.0\Advent of Code.runtimeconfig.json
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\bin\Debug\net6.0\Advent of Code.dll
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\bin\Debug\net6.0\Advent of Code.pdb
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\obj\Debug\net6.0\Advent of Code.GeneratedMSBuildEditorConfig.editorconfig
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\obj\Debug\net6.0\Advent of Code.AssemblyInfoInputs.cache
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\obj\Debug\net6.0\Advent of Code.AssemblyInfo.cs
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\obj\Debug\net6.0\Advent of Code.csproj.CoreCompileInputs.cache
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\obj\Debug\net6.0\Advent of Code.dll
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\obj\Debug\net6.0\refint\Advent of Code.dll
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\obj\Debug\net6.0\Advent of Code.pdb
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\obj\Debug\net6.0\Advent of Code.genruntimeconfig.cache
+C:\Coding-Git\Advent-of-Code-2015\Advent of Code\Advent of Code\obj\Debug\net6.0\ref\Advent of Code.dll
