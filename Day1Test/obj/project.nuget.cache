@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LNveIBLPjQRWU4soadvDrxe2I6p+TvOZ8hNljqR9KPZ+5T6ET1JUvqNIiz2UEcZsyBRy9m4V1ejeWuNxNBR5Eg==",
+  "dgSpecHash": "/fjyO30/LXrCPGbWLalr0LeHlwheq/F4SUfKnEjDYCbUOum2Zkg+5aKt2KYcAd2T0EKtU8eBCgQQ0oO5MVuaYQ==",
   "success": true,
-  "projectFilePath": "C:\\Coding-Git\\Advent-of-Code-2015\\Day1Test\\Day1Test.csproj",
+  "projectFilePath": "C:\\Coding-Git\\Advent-of-Code-2015\\Day1Test\\asdf.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tobia\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "C:\\Users\\tobia\\.nuget\\packages\\microsoft.codecoverage\\17.5.0\\microsoft.codecoverage.17.5.0.nupkg.sha512",

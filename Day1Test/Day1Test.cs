@@ -1,22 +1,26 @@
-using Day_1;
 using System.Reflection;
+using Tasks;
 
-namespace Day1Test
+namespace DayTests
 {
     [TestClass]
-    public class UnitTestTask1
+    public class Day1Test
     {
+        DayFactory _factory = new DayFactory();
         [TestMethod]
         public void OpenFile_Success()
         {
             // Arrange
             string expected = "Test file for unit test";
-            string filePath = "C:/Coding-Git/Advent-of-Code-2015/Day1Test/testFile.txt";
+            string filePath = "C:/Coding-Git/Advent-of-Code-2015/Day1Test/Test Files/Day1TestFile.txt";
+            IDay task = _factory.MakeDay("Day1");
+            task.SetFilePath(filePath);
+
             // Act
             // Access to private method
-            string result = (string) typeof(Day_1.Day1)
+            string result = (string)typeof(Day1)
                 .GetMethod("OpenFile", BindingFlags.NonPublic | BindingFlags.Instance)
-                .Invoke(new Day_1.Day1(filePath), new object[] {  });
+                .Invoke(task, new object[] { });
 
             // Assert
             Assert.AreEqual(expected, result);
@@ -27,16 +31,17 @@ namespace Day1Test
         {
             // Arrange
             string filePath = "";
-            Day_1.Day1 task = new Day_1.Day1(filePath);
+            IDay task = _factory.MakeDay("Day1");
+            task.SetFilePath(filePath);
 
             // Act and Assert
             Assert.ThrowsException<ArgumentException>(() =>
             {
                 try
                 {
-                    typeof(Day_1.Day1)
+                    typeof(Day1)
                         .GetMethod("OpenFile", BindingFlags.NonPublic | BindingFlags.Instance)
-                        .Invoke(task, new object[] {  });
+                        .Invoke(task, new object[] { });
                 }
                 catch (TargetInvocationException ex)
                 {
@@ -54,17 +59,18 @@ namespace Day1Test
         public void OpenFile_FailureGivenFile()
         {
             // Arrange
-            string filePath = "C:/Coding-Git/Advent-of-Code-2015/Day1Test/NoFileHere.txt";
-            Day_1.Day1 task = new Day_1.Day1(filePath);
+            string filePath = "C:/Coding-Git/Advent-of-Code-2015/Day1Test/Test Files/NoFileHere.txt";
+            IDay task = _factory.MakeDay("Day1");
+            task.SetFilePath(filePath);
 
             // Act and Assert
             Assert.ThrowsException<FileNotFoundException>(() =>
             {
                 try
                 {
-                    typeof(Day_1.Day1)
+                    typeof(Day1)
                         .GetMethod("OpenFile", BindingFlags.NonPublic | BindingFlags.Instance)
-                        .Invoke(task, new object[] {  });
+                        .Invoke(task, new object[] { });
                 }
                 catch (TargetInvocationException ex)
                 {
@@ -83,11 +89,11 @@ namespace Day1Test
             // Arrange
             int expected = 5;
             string testString = "(((())))()()(()(()(()(()(()";
-            Day1 task = new Day1("No need for the path");
+            IDay task = _factory.MakeDay("Day1");
 
             // Act
             // Access to private method
-            int result = (int)typeof(Day_1.Day1)
+            int result = (int)typeof(Day1)
                 .GetMethod("CountFloor", BindingFlags.NonPublic | BindingFlags.Instance)
                 .Invoke(task, new object[] { testString });
 
@@ -101,11 +107,11 @@ namespace Day1Test
             // Arrange
             int expected = 5;
             string testString = "(((1 ()as)))(  g)()(f3g()(()(s(4)(()(()";
-            Day1 task = new Day1("No need for the path");
+            IDay task = _factory.MakeDay("Day1");
 
             // Act
             // Access to private method
-            int result = (int)typeof(Day_1.Day1)
+            int result = (int)typeof(Day1)
                 .GetMethod("CountFloor", BindingFlags.NonPublic | BindingFlags.Instance)
                 .Invoke(task, new object[] { testString });
 
@@ -119,12 +125,66 @@ namespace Day1Test
             // Arrange
             int expected = 0;
             string testString = "";
-            Day1 task = new Day1("No need for the path");
+            IDay task = _factory.MakeDay("Day1");
 
             // Act
             // Access to private method
-            int result = (int)typeof(Day_1.Day1)
+            int result = (int)typeof(Day1)
                 .GetMethod("CountFloor", BindingFlags.NonPublic | BindingFlags.Instance)
+                .Invoke(task, new object[] { testString });
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void CountToBasement_Success()
+        {
+            // Arrange
+            int expected = 23;
+            string testString = "((())((()))()(()))(()))(())((()";
+            IDay task = _factory.MakeDay("Day1");
+
+            // Act
+            // Access to private method
+            int result = (int)typeof(Day1)
+                .GetMethod("CountToBasement", BindingFlags.NonPublic | BindingFlags.Instance)
+                .Invoke(task, new object[] { testString });
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void CountToBasement_InputWithOtherChars()
+        {
+            // Arrange
+            int expected = 23;
+            string testString = "((a( s))(1323((asd) sa))()(fdg()))(ga())) (())((()";
+            IDay task = _factory.MakeDay("Day1");
+
+            // Act
+            // Access to private method
+            int result = (int)typeof(Day1)
+                .GetMethod("CountToBasement", BindingFlags.NonPublic | BindingFlags.Instance)
+                .Invoke(task, new object[] { testString });
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void CountToBasement_EmptyInput()
+        {
+            // Arrange
+            int expected = 0;
+            string testString = "";
+            IDay task = _factory.MakeDay("Day1");
+
+            // Act
+            // Access to private method
+            int result = (int)typeof(Day1)
+                .GetMethod("CountToBasement", BindingFlags.NonPublic | BindingFlags.Instance)
                 .Invoke(task, new object[] { testString });
 
             // Assert

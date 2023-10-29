@@ -2325,9 +2325,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Coding-Git\\Advent-of-Code-2015\\Day1Test\\Day1Test.csproj",
-      "projectName": "Day1Test",
-      "projectPath": "C:\\Coding-Git\\Advent-of-Code-2015\\Day1Test\\Day1Test.csproj",
+      "projectUniqueName": "C:\\Coding-Git\\Advent-of-Code-2015\\Day1Test\\asdf.csproj",
+      "projectName": "asdf",
+      "projectPath": "C:\\Coding-Git\\Advent-of-Code-2015\\Day1Test\\asdf.csproj",
       "packagesPath": "C:\\Users\\tobia\\.nuget\\packages\\",
       "outputPath": "C:\\Coding-Git\\Advent-of-Code-2015\\Day1Test\\obj\\",
       "projectStyle": "PackageReference",

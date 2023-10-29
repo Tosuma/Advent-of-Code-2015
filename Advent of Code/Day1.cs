@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.CompilerServices;
 
-namespace Day_1
+namespace Tasks
 {
     public class Day1 : IDay
     {
         private string _filePath;
-        public Day1(string filePath)
+
+        public void SetFilePath(string filePath)
         {
-
-            _filePath = filePath;
-
+            if (filePath != null) 
+                _filePath = filePath;
         }
+
         // Task 1
         public int FindFloor()
         {
@@ -96,13 +97,10 @@ namespace Day_1
                 int floorNumber = FindFloor();
                 Console.WriteLine("Task 1. The result is: " + floorNumber);
             }
-            catch (ArgumentException e)
+            catch (Exception e)
             {
                 Console.WriteLine("Error: " + e.Message);
-            }
-            catch (FileNotFoundException e)
-            {
-                Console.WriteLine("Error: " + e.Message);
+                return;
             }
         }
 
@@ -113,13 +111,10 @@ namespace Day_1
                 int amountOfFloorChanges = FindBasement();
                 Console.WriteLine("Task 2. The result is: " + amountOfFloorChanges);
             }
-            catch (ArgumentException e)
+            catch (Exception e)
             {
                 Console.WriteLine("Error: " + e.Message);
-            }
-            catch (FileNotFoundException e)
-            {
-                Console.WriteLine("Error: " + e.Message);
+                return;
             }
         }
     }

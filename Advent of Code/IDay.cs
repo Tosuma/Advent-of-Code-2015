@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Day_1
+namespace Tasks
 {
-    interface IDay
+    public interface IDay
     {
         public void Task1();
         public void Task2();
+        public void SetFilePath(string filePath);
     }
 }
