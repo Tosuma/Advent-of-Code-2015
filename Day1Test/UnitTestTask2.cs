@@ -17,11 +17,13 @@ namespace Day1Test
             // Arrange
             int expected = 23;
             string testString = "((())((()))()(()))(()))(())((()";
+            Day1 task = new Day1("No need for the path");
+            
             // Act
             // Access to private method
-            int result = (int)typeof(Day_1.Task)
+            int result = (int)typeof(Day_1.Day1)
                 .GetMethod("CountToBasement", BindingFlags.NonPublic | BindingFlags.Instance)
-                .Invoke(new Day_1.Task(), new object[] { testString });
+                .Invoke(task, new object[] { testString });
 
             // Assert
             Assert.AreEqual(expected, result);
@@ -33,11 +35,13 @@ namespace Day1Test
             // Arrange
             int expected = 23;
             string testString = "((a( s))(1323((asd) sa))()(fdg()))(ga())) (())((()";
+            Day1 task = new Day1("No need for the path");
+
             // Act
             // Access to private method
-            int result = (int)typeof(Day_1.Task)
+            int result = (int)typeof(Day_1.Day1)
                 .GetMethod("CountToBasement", BindingFlags.NonPublic | BindingFlags.Instance)
-                .Invoke(new Day_1.Task(), new object[] { testString });
+                .Invoke(task, new object[] { testString });
 
             // Assert
             Assert.AreEqual(expected, result);
@@ -49,11 +53,13 @@ namespace Day1Test
             // Arrange
             int expected = 0;
             string testString = "";
+            Day1 task = new Day1("No need for the path");
+
             // Act
             // Access to private method
-            int result = (int)typeof(Day_1.Task)
+            int result = (int)typeof(Day_1.Day1)
                 .GetMethod("CountToBasement", BindingFlags.NonPublic | BindingFlags.Instance)
-                .Invoke(new Day_1.Task(), new object[] { testString });
+                .Invoke(task, new object[] { testString });
 
             // Assert
             Assert.AreEqual(expected, result);

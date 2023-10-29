@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day 1", "Advent of Code\Day 1.csproj", "{036148D7-D4EB-417F-AE5B-5BA150C53D46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tasks", "Advent of Code\Tasks.csproj", "{036148D7-D4EB-417F-AE5B-5BA150C53D46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day1Test", "Day1Test\Day1Test.csproj", "{E7888933-B42A-467A-97FA-E686CDBB1F26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day1Test", "Day1Test\Day1Test.csproj", "{E7888933-B42A-467A-97FA-E686CDBB1F26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

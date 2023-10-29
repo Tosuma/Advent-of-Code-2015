@@ -8,15 +8,22 @@ using System.Runtime.CompilerServices;
 
 namespace Day_1
 {
-    public class Task
+    public class Day1 : IDay
     {
+        private string _filePath;
+        public Day1(string filePath)
+        {
+
+            _filePath = filePath;
+
+        }
         // Task 1
-        public int FindFloor(string filePath)
+        public int FindFloor()
         {
             string fileContent;
             try
             {
-                fileContent = OpenFile(filePath);
+                fileContent = OpenFile();
                 int floor = CountFloor(fileContent);
                 return floor;
             }
@@ -39,26 +46,26 @@ namespace Day_1
         }
 
         // Task 1 & 2
-        private string OpenFile(string filePath)
+        private string OpenFile()
         {
-            if (filePath == null || filePath == string.Empty)
+            if (_filePath == null || _filePath == string.Empty)
             {
                 throw new ArgumentException("Invalid file path");
             }
-            if (!File.Exists(filePath))
+            if (!File.Exists(_filePath))
             {
                 throw new FileNotFoundException("File not found");
             }
-            return File.ReadAllText(filePath);       
+            return File.ReadAllText(_filePath);       
         }
 
         // Task 2
-        public int FindBasement(string filePath)
+        public int FindBasement()
         {
             string fileContent;
             try
             {
-                fileContent = OpenFile(filePath);
+                fileContent = OpenFile();
                 int floor = CountToBasement(fileContent);
                 return floor;
             }
@@ -82,15 +89,28 @@ namespace Day_1
             return count;
         }
 
-        public static void Main(string[] args)
+        public void Task1()
         {
-            string filePath = "C:\\Coding-Git\\Advent-of-Code-2015\\Advent of Code\\Task1Input.txt";
-            Task task = new Task();
             try
             {
-                int floorNumber = task.FindFloor(filePath);
-                int amountOfFloorChanges = task.FindBasement(filePath);
+                int floorNumber = FindFloor();
                 Console.WriteLine("Task 1. The result is: " + floorNumber);
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine("Error: " + e.Message);
+            }
+            catch (FileNotFoundException e)
+            {
+                Console.WriteLine("Error: " + e.Message);
+            }
+        }
+
+        public void Task2()
+        {
+            try
+            {
+                int amountOfFloorChanges = FindBasement();
                 Console.WriteLine("Task 2. The result is: " + amountOfFloorChanges);
             }
             catch (ArgumentException e)

@@ -118,9 +118,6 @@ C:\Coding-Git\Advent-of-Code-2015\Day1Test\bin\Debug\net6.0\Microsoft.VisualStud
 C:\Coding-Git\Advent-of-Code-2015\Day1Test\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Coding-Git\Advent-of-Code-2015\Day1Test\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
 C:\Coding-Git\Advent-of-Code-2015\Day1Test\bin\Debug\net6.0\Microsoft.TestPlatform.AdapterUtilities.dll
-C:\Coding-Git\Advent-of-Code-2015\Day1Test\bin\Debug\net6.0\Day 1.deps.json
-C:\Coding-Git\Advent-of-Code-2015\Day1Test\bin\Debug\net6.0\Day 1.runtimeconfig.json
-C:\Coding-Git\Advent-of-Code-2015\Day1Test\bin\Debug\net6.0\Day 1.exe
 C:\Coding-Git\Advent-of-Code-2015\Day1Test\bin\Debug\net6.0\Day1Test.deps.json
 C:\Coding-Git\Advent-of-Code-2015\Day1Test\bin\Debug\net6.0\Day1Test.runtimeconfig.json
 C:\Coding-Git\Advent-of-Code-2015\Day1Test\bin\Debug\net6.0\Day1Test.dll
@@ -201,10 +198,13 @@ C:\Coding-Git\Advent-of-Code-2015\Day1Test\bin\Debug\net6.0\zh-Hans\Microsoft.Vi
 C:\Coding-Git\Advent-of-Code-2015\Day1Test\bin\Debug\net6.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 C:\Coding-Git\Advent-of-Code-2015\Day1Test\bin\Debug\net6.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Coding-Git\Advent-of-Code-2015\Day1Test\bin\Debug\net6.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Coding-Git\Advent-of-Code-2015\Day1Test\bin\Debug\net6.0\Day 1.dll
 C:\Coding-Git\Advent-of-Code-2015\Day1Test\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
-C:\Coding-Git\Advent-of-Code-2015\Day1Test\bin\Debug\net6.0\Day 1.pdb
 C:\Coding-Git\Advent-of-Code-2015\Day1Test\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 C:\Coding-Git\Advent-of-Code-2015\Day1Test\obj\Debug\net6.0\Day1Test.csproj.CopyComplete
 C:\Coding-Git\Advent-of-Code-2015\Day1Test\obj\Debug\net6.0\Day1Test.genruntimeconfig.cache
 C:\Coding-Git\Advent-of-Code-2015\Day1Test\obj\Debug\net6.0\ref\Day1Test.dll
+C:\Coding-Git\Advent-of-Code-2015\Day1Test\bin\Debug\net6.0\Tasks.deps.json
+C:\Coding-Git\Advent-of-Code-2015\Day1Test\bin\Debug\net6.0\Tasks.runtimeconfig.json
+C:\Coding-Git\Advent-of-Code-2015\Day1Test\bin\Debug\net6.0\Tasks.exe
+C:\Coding-Git\Advent-of-Code-2015\Day1Test\bin\Debug\net6.0\Tasks.dll
+C:\Coding-Git\Advent-of-Code-2015\Day1Test\bin\Debug\net6.0\Tasks.pdb

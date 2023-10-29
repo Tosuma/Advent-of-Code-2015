@@ -11,6 +11,7 @@
           "MSTest.TestAdapter": "2.2.10",
           "MSTest.TestFramework": "2.2.10",
           "Microsoft.NET.Test.Sdk": "17.5.0",
+          "Tasks": "1.0.0",
           "coverlet.collector": "3.2.0",
           "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions": "14.0.0.0"
         },
@@ -430,9 +431,9 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "Day 1/1.0.0": {
+      "Tasks/1.0.0": {
         "runtime": {
-          "Day 1.dll": {}
+          "Tasks.dll": {}
         }
       },
       "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions/14.0.0.0": {
@@ -640,7 +641,7 @@
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
-    "Day 1/1.0.0": {
+    "Tasks/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -4,12 +4,12 @@
     "C:\\Coding-Git\\Advent-of-Code-2015\\Day1Test\\Day1Test.csproj": {}
   },
   "projects": {
-    "C:\\Coding-Git\\Advent-of-Code-2015\\Advent of Code\\Day 1.csproj": {
+    "C:\\Coding-Git\\Advent-of-Code-2015\\Advent of Code\\Tasks.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Coding-Git\\Advent-of-Code-2015\\Advent of Code\\Day 1.csproj",
-        "projectName": "Day 1",
-        "projectPath": "C:\\Coding-Git\\Advent-of-Code-2015\\Advent of Code\\Day 1.csproj",
+        "projectUniqueName": "C:\\Coding-Git\\Advent-of-Code-2015\\Advent of Code\\Tasks.csproj",
+        "projectName": "Tasks",
+        "projectPath": "C:\\Coding-Git\\Advent-of-Code-2015\\Advent of Code\\Tasks.csproj",
         "packagesPath": "C:\\Users\\tobia\\.nuget\\packages\\",
         "outputPath": "C:\\Coding-Git\\Advent-of-Code-2015\\Advent of Code\\obj\\",
         "projectStyle": "PackageReference",
@@ -91,8 +91,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Coding-Git\\Advent-of-Code-2015\\Advent of Code\\Day 1.csproj": {
-                "projectPath": "C:\\Coding-Git\\Advent-of-Code-2015\\Advent of Code\\Day 1.csproj"
+              "C:\\Coding-Git\\Advent-of-Code-2015\\Advent of Code\\Tasks.csproj": {
+                "projectPath": "C:\\Coding-Git\\Advent-of-Code-2015\\Advent of Code\\Tasks.csproj"
               }
             }
           }

@@ -14,9 +14,9 @@ namespace Day1Test
             string filePath = "C:/Coding-Git/Advent-of-Code-2015/Day1Test/testFile.txt";
             // Act
             // Access to private method
-            string result = (string) typeof(Day_1.Task)
+            string result = (string) typeof(Day_1.Day1)
                 .GetMethod("OpenFile", BindingFlags.NonPublic | BindingFlags.Instance)
-                .Invoke(new Day_1.Task(), new object[] { filePath });
+                .Invoke(new Day_1.Day1(filePath), new object[] {  });
 
             // Assert
             Assert.AreEqual(expected, result);
@@ -26,17 +26,17 @@ namespace Day1Test
         public void OpenFile_FailureGivenEmptyString()
         {
             // Arrange
-            String filePath = "";
-            Day_1.Task task = new Day_1.Task();
+            string filePath = "";
+            Day_1.Day1 task = new Day_1.Day1(filePath);
 
             // Act and Assert
             Assert.ThrowsException<ArgumentException>(() =>
             {
                 try
                 {
-                    typeof(Day_1.Task)
+                    typeof(Day_1.Day1)
                         .GetMethod("OpenFile", BindingFlags.NonPublic | BindingFlags.Instance)
-                        .Invoke(task, new object[] { filePath });
+                        .Invoke(task, new object[] {  });
                 }
                 catch (TargetInvocationException ex)
                 {
@@ -54,17 +54,17 @@ namespace Day1Test
         public void OpenFile_FailureGivenFile()
         {
             // Arrange
-            String filePath = "C:/Coding-Git/Advent-of-Code-2015/Day1Test/NoFileHere.txt";
-            Day_1.Task task = new Day_1.Task();
+            string filePath = "C:/Coding-Git/Advent-of-Code-2015/Day1Test/NoFileHere.txt";
+            Day_1.Day1 task = new Day_1.Day1(filePath);
 
             // Act and Assert
             Assert.ThrowsException<FileNotFoundException>(() =>
             {
                 try
                 {
-                    typeof(Day_1.Task)
+                    typeof(Day_1.Day1)
                         .GetMethod("OpenFile", BindingFlags.NonPublic | BindingFlags.Instance)
-                        .Invoke(task, new object[] { filePath });
+                        .Invoke(task, new object[] {  });
                 }
                 catch (TargetInvocationException ex)
                 {
@@ -83,11 +83,13 @@ namespace Day1Test
             // Arrange
             int expected = 5;
             string testString = "(((())))()()(()(()(()(()(()";
+            Day1 task = new Day1("No need for the path");
+
             // Act
             // Access to private method
-            int result = (int)typeof(Day_1.Task)
+            int result = (int)typeof(Day_1.Day1)
                 .GetMethod("CountFloor", BindingFlags.NonPublic | BindingFlags.Instance)
-                .Invoke(new Day_1.Task(), new object[] { testString });
+                .Invoke(task, new object[] { testString });
 
             // Assert
             Assert.AreEqual(expected, result);
@@ -99,11 +101,13 @@ namespace Day1Test
             // Arrange
             int expected = 5;
             string testString = "(((1 ()as)))(  g)()(f3g()(()(s(4)(()(()";
+            Day1 task = new Day1("No need for the path");
+
             // Act
             // Access to private method
-            int result = (int)typeof(Day_1.Task)
+            int result = (int)typeof(Day_1.Day1)
                 .GetMethod("CountFloor", BindingFlags.NonPublic | BindingFlags.Instance)
-                .Invoke(new Day_1.Task(), new object[] { testString });
+                .Invoke(task, new object[] { testString });
 
             // Assert
             Assert.AreEqual(expected, result);
@@ -115,11 +119,13 @@ namespace Day1Test
             // Arrange
             int expected = 0;
             string testString = "";
+            Day1 task = new Day1("No need for the path");
+
             // Act
             // Access to private method
-            int result = (int)typeof(Day_1.Task)
+            int result = (int)typeof(Day_1.Day1)
                 .GetMethod("CountFloor", BindingFlags.NonPublic | BindingFlags.Instance)
-                .Invoke(new Day_1.Task(), new object[] { testString });
+                .Invoke(task, new object[] { testString });
 
             // Assert
             Assert.AreEqual(expected, result);

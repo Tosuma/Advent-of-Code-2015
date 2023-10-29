@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Coding-Git\\Advent-of-Code-2015\\Advent of Code\\Day 1.csproj",
-      "projectName": "Day 1",
-      "projectPath": "C:\\Coding-Git\\Advent-of-Code-2015\\Advent of Code\\Day 1.csproj",
+      "projectUniqueName": "C:\\Coding-Git\\Advent-of-Code-2015\\Advent of Code\\Tasks.csproj",
+      "projectName": "Tasks",
+      "projectPath": "C:\\Coding-Git\\Advent-of-Code-2015\\Advent of Code\\Tasks.csproj",
       "packagesPath": "C:\\Users\\tobia\\.nuget\\packages\\",
       "outputPath": "C:\\Coding-Git\\Advent-of-Code-2015\\Advent of Code\\obj\\",
       "projectStyle": "PackageReference",

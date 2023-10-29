@@ -599,14 +599,14 @@
           }
         }
       },
-      "Day 1/1.0.0": {
+      "Tasks/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/Day 1.dll": {}
+          "bin/placeholder/Tasks.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Day 1.dll": {}
+          "bin/placeholder/Tasks.dll": {}
         }
       }
     }
@@ -2303,18 +2303,18 @@
         "system.threading.tasks.nuspec"
       ]
     },
-    "Day 1/1.0.0": {
+    "Tasks/1.0.0": {
       "type": "project",
-      "path": "../Advent of Code/Day 1.csproj",
-      "msbuildProject": "../Advent of Code/Day 1.csproj"
+      "path": "../Advent of Code/Tasks.csproj",
+      "msbuildProject": "../Advent of Code/Tasks.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Day 1 >= 1.0.0",
       "MSTest.TestAdapter >= 2.2.10",
       "MSTest.TestFramework >= 2.2.10",
       "Microsoft.NET.Test.Sdk >= 17.5.0",
+      "Tasks >= 1.0.0",
       "coverlet.collector >= 3.2.0"
     ]
   },
@@ -2350,8 +2350,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Coding-Git\\Advent-of-Code-2015\\Advent of Code\\Day 1.csproj": {
-              "projectPath": "C:\\Coding-Git\\Advent-of-Code-2015\\Advent of Code\\Day 1.csproj"
+            "C:\\Coding-Git\\Advent-of-Code-2015\\Advent of Code\\Tasks.csproj": {
+              "projectPath": "C:\\Coding-Git\\Advent-of-Code-2015\\Advent of Code\\Tasks.csproj"
             }
           }
         }
