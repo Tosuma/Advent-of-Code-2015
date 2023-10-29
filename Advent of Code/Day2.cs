@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Tasks
@@ -31,17 +32,52 @@ namespace Tasks
 
         private (int Length, int Width, int Height) ExtractInfo(string line)
         {
-            return (Length: 1,  Width: 1, Height: 1);
+            string matchPattern = @"^\d+x\d+x\d+$";
+            if (line == string.Empty)
+            {
+                throw new ArgumentException("No input was given");
+            }
+            if (!Regex.IsMatch(line, matchPattern))
+            {
+                throw new ArgumentException("Invalid string given. Only 2 'x' allowed");
+            }
+
+            int[] data = line.Split('x')
+                .Select(int.Parse)
+                .ToArray();
+            return (data[0], data[1], data[2]);
         }
 
         private int FindSmallestArea((int Length, int Width, int Height) measurement)
         {
-            return 1;
+            int length = measurement.Length;
+            int width = measurement.Width;
+            int height = measurement.Height;
+            
+            int smallest = Math.Min(length, Math.Max(width, height));
+            int nextSmallest = 0;
+
+            if (smallest == length)
+            {
+                nextSmallest = Math.Min(width, height);
+            }
+            else if (smallest == width)
+            {
+                nextSmallest = Math.Min(length, height);
+            }
+            else
+            {
+                nextSmallest = Math.Min(length, width);
+            }
+            return smallest * nextSmallest;
         }
 
         private int CalculateSurface((int Length, int Width, int Height) measurement)
         {
-            return 1;
+            int length = measurement.Length;
+            int width = measurement.Width;
+            int height = measurement.Height;
+            return (2 * length * width) + (2 * width * height) + (2 * height * length);
         }
 
         public void Task1()

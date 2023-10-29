@@ -126,7 +126,7 @@ namespace DayTests
                 }
                 catch (TargetInvocationException ex)
                 {
-                    if (ex.InnerException is FileNotFoundException)
+                    if (ex.InnerException is ArgumentException)
                     {
                         throw ex.InnerException;
                     }
@@ -153,7 +153,7 @@ namespace DayTests
                 }
                 catch (TargetInvocationException ex)
                 {
-                    if (ex.InnerException is FileNotFoundException)
+                    if (ex.InnerException is ArgumentException)
                     {
                         throw ex.InnerException;
                     }
@@ -166,14 +166,14 @@ namespace DayTests
         public void CalculateSurface_Success()
         {
             // Arrange
-            (int Length, int Width, int Height) measurement = (2, 3, 4);
+            (int Length, int Width, int Height) measurement = (Length: 2, Width: 3, Height: 4);
             int expected = 52;
             IDay task = _factory.MakeDay("Day2");
 
             // Act
             // Access to private method
             int result = (int)typeof(Day2)
-                .GetMethod("OpenFile", BindingFlags.NonPublic | BindingFlags.Instance)
+                .GetMethod("CalculateSurface", BindingFlags.NonPublic | BindingFlags.Instance)
                 .Invoke(task, new object[] { measurement });
 
             // Assert
@@ -191,7 +191,7 @@ namespace DayTests
             // Act
             // Access to private method
             int result = (int)typeof(Day2)
-                .GetMethod("OpenFile", BindingFlags.NonPublic | BindingFlags.Instance)
+                .GetMethod("FindSmallestArea", BindingFlags.NonPublic | BindingFlags.Instance)
                 .Invoke(task, new object[] { measurement });
 
             // Assert
