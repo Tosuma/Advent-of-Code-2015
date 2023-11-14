@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace Tasks
+namespace Tasks.Days
 {
     public class Day2 : Day
     {
@@ -33,7 +33,7 @@ namespace Tasks
             int length = measurement.Length;
             int width = measurement.Width;
             int height = measurement.Height;
-            
+
             int smallest = Math.Min(length, Math.Max(width, height));
             int nextSmallest;
             if (smallest == length)
@@ -56,7 +56,7 @@ namespace Tasks
             int length = measurement.Length;
             int width = measurement.Width;
             int height = measurement.Height;
-            return (2 * length * width) + (2 * width * height) + (2 * height * length);
+            return 2 * length * width + 2 * width * height + 2 * height * length;
         }
 
 

@@ -34,6 +34,13 @@ namespace Tasks
             day3.SetFilePath("C:/Coding-Git/Advent-of-Code-2015/Advent of Code/Task Files/Day3.txt");
             day3.Task1();
             day3.Task2();
+
+            // Day 4 tasks
+            Day day4 = factory.MakeDay("Day4");
+
+            day4.SetFilePath("C:/Coding-Git/Advent-of-Code-2015/Advent of Code/Task Files/Day4.txt");
+            day4.Task1();
+            day4.Task2();
         }
     }
 }

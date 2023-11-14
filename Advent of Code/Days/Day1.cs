@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.CompilerServices;
 
-namespace Tasks
+namespace Tasks.Days
 {
     public class Day1 : Day
     {
@@ -69,7 +69,7 @@ namespace Tasks
             int currentFloor = 0;
             foreach (char line in fileContent)
             {
-                if (currentFloor < 0) { break ; }
+                if (currentFloor < 0) { break; }
                 if (line == '(') { currentFloor++; count++; }
                 else if (line == ')') { currentFloor--; count++; }
             }

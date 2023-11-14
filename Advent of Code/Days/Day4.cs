@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tasks
+namespace Tasks.Days
 {
-    public class Day3 : Day
+    public class Day4 : Day
     {
         public override void Task1()
         {
