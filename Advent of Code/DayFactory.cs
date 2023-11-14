@@ -8,7 +8,7 @@ namespace Tasks
 {
     public class DayFactory
     {
-        public IDay MakeDay(string day)
+        public Day MakeDay(string day)
         {
             if (day == null)
                 throw new ArgumentNullException("No input was given");
@@ -21,6 +21,11 @@ namespace Tasks
             {
                 Console.WriteLine("+------ Day  2 is beginning ------+");
                 return new Day2();
+            }
+            if (day.Equals("DAY3", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("+------ Day  3 is beginning ------+");
+                return new Day3();
             }
 
             throw new ArgumentException("No match found for input");

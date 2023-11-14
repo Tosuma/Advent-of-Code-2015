@@ -8,24 +8,20 @@ using System.Runtime.CompilerServices;
 
 namespace Tasks
 {
-    public class Day1 : IDay
+    public class Day1 : Day
     {
-        private string _filePath;
-
-        public void SetFilePath(string filePath)
-        {
-            if (filePath != null) 
-                _filePath = filePath;
-        }
-
         // Task 1
         public int FindFloor()
         {
-            string fileContent;
+            string[] fileContent;
             try
             {
                 fileContent = OpenFile();
-                int floor = CountFloor(fileContent);
+                if (fileContent.Length > 1)
+                {
+                    throw new InvalidDataException("File contains wrong formatted data");
+                }
+                int floor = CountFloor(fileContent[0]);
                 return floor;
             }
             catch (Exception)
@@ -46,28 +42,18 @@ namespace Tasks
             return count;
         }
 
-        // Task 1 & 2
-        private string OpenFile()
-        {
-            if (_filePath == null || _filePath == string.Empty)
-            {
-                throw new ArgumentException("Invalid file path");
-            }
-            if (!File.Exists(_filePath))
-            {
-                throw new FileNotFoundException("File not found");
-            }
-            return File.ReadAllText(_filePath);       
-        }
-
         // Task 2
         public int FindBasement()
         {
-            string fileContent;
+            string[] fileContent;
             try
             {
                 fileContent = OpenFile();
-                int floor = CountToBasement(fileContent);
+                if (fileContent.Length > 1)
+                {
+                    throw new Exception("Find exception for wrong read");
+                }
+                int floor = CountToBasement(fileContent[0]);
                 return floor;
             }
             catch (Exception)
@@ -90,7 +76,7 @@ namespace Tasks
             return count;
         }
 
-        public void Task1()
+        public override void Task1()
         {
             try
             {
@@ -104,7 +90,7 @@ namespace Tasks
             }
         }
 
-        public void Task2()
+        public override void Task2()
         {
             try
             {

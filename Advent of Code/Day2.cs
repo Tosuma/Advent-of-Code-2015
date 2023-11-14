@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -7,29 +8,8 @@ using System.Threading.Tasks;
 
 namespace Tasks
 {
-    public class Day2 : IDay
+    public class Day2 : Day
     {
-        private string _filePath;
-
-        public void SetFilePath(string filePath)
-        {
-            if (filePath != null)
-                _filePath = filePath;
-        }
-
-        private string[] OpenFile()
-        {
-            if (_filePath == null || _filePath == string.Empty)
-            {
-                throw new ArgumentException("Invalid file path");
-            }
-            if (!File.Exists(_filePath))
-            {
-                throw new FileNotFoundException("File not found");
-            }
-            return File.ReadAllLines(_filePath);
-        }
-
         private (int Length, int Width, int Height) ExtractInfo(string line)
         {
             string matchPattern = @"^\d+x\d+x\d+$";
@@ -39,7 +19,7 @@ namespace Tasks
             }
             if (!Regex.IsMatch(line, matchPattern))
             {
-                throw new ArgumentException("Invalid string given. Only 2 'x' allowed");
+                throw new ArgumentException("Invalid string given");
             }
 
             int[] data = line.Split('x')
@@ -48,15 +28,14 @@ namespace Tasks
             return (data[0], data[1], data[2]);
         }
 
-        private int FindSmallestArea((int Length, int Width, int Height) measurement)
+        private (int smallest, int nextSmallest) FindSmallestSides((int Length, int Width, int Height) measurement)
         {
             int length = measurement.Length;
             int width = measurement.Width;
             int height = measurement.Height;
             
             int smallest = Math.Min(length, Math.Max(width, height));
-            int nextSmallest = 0;
-
+            int nextSmallest;
             if (smallest == length)
             {
                 nextSmallest = Math.Min(width, height);
@@ -69,7 +48,7 @@ namespace Tasks
             {
                 nextSmallest = Math.Min(length, width);
             }
-            return smallest * nextSmallest;
+            return (smallest, nextSmallest);
         }
 
         private int CalculateSurface((int Length, int Width, int Height) measurement)
@@ -80,7 +59,8 @@ namespace Tasks
             return (2 * length * width) + (2 * width * height) + (2 * height * length);
         }
 
-        public void Task1()
+
+        public override void Task1()
         {
             try
             {
@@ -90,10 +70,11 @@ namespace Tasks
                 {
                     var measurement = ExtractInfo(line);
                     int surface = CalculateSurface(measurement);
-                    int smallestArea = FindSmallestArea(measurement);
+                    var side = FindSmallestSides(measurement);
+                    int smallestArea = side.smallest * side.nextSmallest;
                     sum += surface + smallestArea;
                 }
-                Console.WriteLine("Task 1. The result is: " + sum);
+                Console.WriteLine($"Task 1. The result is: {sum}");
             }
             catch (Exception e)
             {
@@ -103,9 +84,26 @@ namespace Tasks
 
         }
 
-        public void Task2()
+        public override void Task2()
         {
-            throw new NotImplementedException();
+            try
+            {
+                int sum = 0;
+                string[] fileContent = OpenFile();
+                foreach (string line in fileContent)
+                {
+                    var measurement = ExtractInfo(line);
+                    var side = FindSmallestSides(measurement);
+                    sum += 2 * side.smallest + 2 * side.nextSmallest;
+                    sum += measurement.Length * measurement.Height * measurement.Width;
+                }
+                Console.WriteLine($"Task 2. The result is: {sum}");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: " + e.Message);
+                return;
+            }
         }
     }
 }
