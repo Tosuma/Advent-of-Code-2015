@@ -4,6 +4,8 @@ using System.Linq;
 using System.Net.WebSockets;
 using System.Text;
 using System.Threading.Tasks;
+using Tasks.Days;
+using Tasks.Factories;
 
 namespace Tasks
 {
@@ -11,36 +13,25 @@ namespace Tasks
     {
         static void Main()
         {
-            // Make DayFactory
-            DayFactory factory = new DayFactory();
+            // Make DayFactories
+            List<IDayFactory> dayFactories = new List<IDayFactory>();
+            for (int i = 1; i <= 24; i++)
+            {
+                string factoryName = $"Tasks.Factories.Day{i}Factory";
+                Type factoryType = Type.GetType(factoryName);
 
-            // Day 1 tasks
-            Day day1 = factory.MakeDay("Day1");
+                if (factoryType != null && typeof(IDayFactory).IsAssignableFrom(factoryType))
+                {
+                    IDayFactory factory = (IDayFactory)Activator.CreateInstance(factoryType);
+                    dayFactories.Add(factory);
+                };
+            }
 
-            day1.SetFilePath("C:/Coding-Git/Advent-of-Code-2015/Advent of Code/Task Files/Day1.txt");
-            day1.Task1();
-            day1.Task2();
-
-            // Day 2 tasks
-            Day day2 = factory.MakeDay("Day2");
-
-            day2.SetFilePath("C:/Coding-Git/Advent-of-Code-2015/Advent of Code/Task Files/Day2.txt");
-            day2.Task1();
-            day2.Task2();
-
-            // Day 3 tasks
-            Day day3 = factory.MakeDay("Day3");
-
-            day3.SetFilePath("C:/Coding-Git/Advent-of-Code-2015/Advent of Code/Task Files/Day3.txt");
-            day3.Task1();
-            day3.Task2();
-
-            // Day 4 tasks
-            Day day4 = factory.MakeDay("Day4");
-
-            day4.SetFilePath("C:/Coding-Git/Advent-of-Code-2015/Advent of Code/Task Files/Day4.txt");
-            day4.Task1();
-            day4.Task2();
+            foreach (IDayFactory dayFactory in dayFactories)
+            {
+                Day day = dayFactory.CreateDay();
+                day.Execute();
+            }
         }
     }
 }

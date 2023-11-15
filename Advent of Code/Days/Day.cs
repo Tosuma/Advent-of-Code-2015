@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tasks
+namespace Tasks.Days
 {
     public abstract class Day
     {
-        private string _filePath;
+        private string _filePath = "";
         public abstract void Task1();
         public abstract void Task2();
         public string[] OpenFile()
@@ -24,10 +24,15 @@ namespace Tasks
             return File.ReadAllLines(_filePath);
         }
 
-        public void SetFilePath(string filePath)
+        public void Execute()
         {
-            if (filePath != null)
-                _filePath = filePath;
+            string dayName = GetType().Name;
+            _filePath = $"C:\\Coding-Git\\Advent-of-Code-2015\\Advent of Code\\Task Files\\{dayName}.txt";
+
+            Console.WriteLine($"+------ {dayName} is beginning ------+");
+            Task1();
+            Task2();
+            Console.WriteLine();
         }
     }
 }
