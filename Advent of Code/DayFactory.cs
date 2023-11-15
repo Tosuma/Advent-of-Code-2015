@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tasks.Days;
 
 namespace Tasks
 {
@@ -26,6 +27,21 @@ namespace Tasks
             {
                 Console.WriteLine("+------ Day  3 is beginning ------+");
                 return new Day3();
+            }
+            if (day.Equals("DAY4", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("+------ Day  4 is beginning ------+");
+                return new Day4();
+            }
+            if (day.Equals("DAY5", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("+------ Day  5 is beginning ------+");
+                //return new Day5();
+            }
+            if (day.Equals("DAY6", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("+------ Day  6 is beginning ------+");
+                //return new Day6();
             }
 
             throw new ArgumentException("No match found for input");
