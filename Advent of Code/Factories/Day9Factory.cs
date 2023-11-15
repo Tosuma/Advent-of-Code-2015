@@ -3,7 +3,7 @@ using Tasks.Days;
 
 namespace Tasks.Factories
 {
-    class Day9Factory : IDayFactory
+    public class Day9Factory : IDayFactory
     {
         public Day CreateDay()
         {

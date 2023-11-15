@@ -5,13 +5,14 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Tasks.Days;
+using Tasks.Factories;
 
 namespace DayTests
 {
     [TestClass]
     public class Day2Test
     {
-        DayFactory _factory = new DayFactory();
+        Day1Factory _factory = new Day1Factory();
 
         [TestMethod]
         public void ExtractInfo_Success()
@@ -19,7 +20,7 @@ namespace DayTests
             // Arrange
             (int Length, int Width, int Height) expected = (20, 3, 11);
             string testString = "20x3x11";
-            Day task = _factory.MakeDay("Day2");
+            Day task = _factory.CreateDay();
 
 
             // Act
@@ -37,7 +38,7 @@ namespace DayTests
         {
             // Arrange
             string testString = "()20xs3x(11sf";
-            Day task = _factory.MakeDay("Day2");
+            Day task = _factory.CreateDay();
 
             // Act and Assert
             Assert.ThrowsException<ArgumentException>(() =>
@@ -64,7 +65,7 @@ namespace DayTests
         {
             // Arrange
             string testString = "";
-            Day task = _factory.MakeDay("Day2");
+            Day task = _factory.CreateDay();
 
             // Act and Assert
             Assert.ThrowsException<ArgumentException>(() =>
@@ -92,7 +93,7 @@ namespace DayTests
             // Arrange
             (int Length, int Width, int Height) measurement = (Length: 2, Width: 3, Height: 4);
             int expected = 52;
-            Day task = _factory.MakeDay("Day2");
+            Day task = _factory.CreateDay();
 
             // Act
             // Access to private method
@@ -110,7 +111,7 @@ namespace DayTests
             // Arrange
             (int Length, int Width, int Height) measurement = (2, 3, 4);
             int expected = 6;
-            Day task = _factory.MakeDay("Day2");
+            Day task = _factory.CreateDay();
 
             // Act
             // Access to private method

@@ -1,12 +1,13 @@
 using System.Reflection;
 using Tasks.Days;
+using Tasks.Factories;
 
 namespace DayTests
 {
     [TestClass]
     public class Day1Test
     {
-        DayFactory _factory = new DayFactory();
+        Day1Factory _factory = new Day1Factory();
         
         [TestMethod]
         public void CountFloor_Success()
@@ -14,7 +15,7 @@ namespace DayTests
             // Arrange
             int expected = 5;
             string testString = "(((())))()()(()(()(()(()(()";
-            Day task = _factory.MakeDay("Day1");
+            Day task = _factory.CreateDay();
 
             // Act
             // Access to private method
@@ -32,7 +33,7 @@ namespace DayTests
             // Arrange
             int expected = 5;
             string testString = "(((1 ()as)))(  g)()(f3g()(()(s(4)(()(()";
-            Day task = _factory.MakeDay("Day1");
+            Day task = _factory.CreateDay();
 
             // Act
             // Access to private method
@@ -50,7 +51,7 @@ namespace DayTests
             // Arrange
             int expected = 0;
             string testString = "";
-            Day task = _factory.MakeDay("Day1");
+            Day task = _factory.CreateDay();
 
             // Act
             // Access to private method
@@ -68,7 +69,7 @@ namespace DayTests
             // Arrange
             int expected = 23;
             string testString = "((())((()))()(()))(()))(())((()";
-            Day task = _factory.MakeDay("Day1");
+            Day task = _factory.CreateDay();
 
             // Act
             // Access to private method
@@ -86,7 +87,7 @@ namespace DayTests
             // Arrange
             int expected = 23;
             string testString = "((a( s))(1323((asd) sa))()(fdg()))(ga())) (())((()";
-            Day task = _factory.MakeDay("Day1");
+            Day task = _factory.CreateDay();
 
             // Act
             // Access to private method
@@ -104,7 +105,7 @@ namespace DayTests
             // Arrange
             int expected = 0;
             string testString = "";
-            Day task = _factory.MakeDay("Day1");
+            Day task = _factory.CreateDay();
 
             // Act
             // Access to private method
