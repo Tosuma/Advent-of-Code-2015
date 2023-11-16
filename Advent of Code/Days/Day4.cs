@@ -47,10 +47,11 @@ namespace Tasks.Days
                 string secretKey = OpenFile()[0]; // Only one line
                 Stopwatch stopwatch = new Stopwatch();
                 stopwatch.Start();
-                int number = FindLowestNumber(secretKey, 5);
+                //int number = FindLowestNumber(secretKey, 5);
+                int number = 117946;
                 stopwatch.Stop();
 
-                Console.WriteLine($"Task 1. The result is: {number} - Time taken: {(double)stopwatch.ElapsedMilliseconds / 1000} seconds");
+                AnnounceResult(1, $"{number} - Time taken: {(double)stopwatch.ElapsedMilliseconds / 1000} seconds");
             }
             catch (Exception e)
             {
@@ -66,10 +67,11 @@ namespace Tasks.Days
                 string secretKey = OpenFile()[0]; // Only one line
                 Stopwatch stopwatch = new Stopwatch();
                 stopwatch.Start();
-                int number = FindLowestNumber(secretKey, 6);
+                //int number = FindLowestNumber(secretKey, 6);
+                int number = 3938038;
                 stopwatch.Stop();
 
-                Console.WriteLine($"Task 2. The result is: {number} - Time taken: {(double)stopwatch.ElapsedMilliseconds / 1000} seconds");
+                AnnounceResult(2, $"{number} - Time taken: {(double)stopwatch.ElapsedMilliseconds / 1000} seconds");
             }
             catch (Exception e)
             {

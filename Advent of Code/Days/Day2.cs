@@ -74,7 +74,7 @@ namespace Tasks.Days
                     int smallestArea = side.smallest * side.nextSmallest;
                     sum += surface + smallestArea;
                 }
-                Console.WriteLine($"Task 1. The result is: {sum}");
+                AnnounceResult(1, sum);
             }
             catch (Exception e)
             {
@@ -97,7 +97,7 @@ namespace Tasks.Days
                     sum += 2 * side.smallest + 2 * side.nextSmallest;
                     sum += measurement.Length * measurement.Height * measurement.Width;
                 }
-                Console.WriteLine($"Task 2. The result is: {sum}");
+                AnnounceResult(1, sum);
             }
             catch (Exception e)
             {

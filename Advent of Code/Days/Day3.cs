@@ -88,7 +88,7 @@ namespace Tasks.Days
             {
                 string fileContent = OpenFile()[0]; // only one line
                 int gotAPresent = CountVisitedHouses(fileContent);
-                Console.WriteLine($"Task 1. The result is: {gotAPresent}");
+                AnnounceResult(1, gotAPresent);
             }
             catch (Exception e)
             {
@@ -103,7 +103,7 @@ namespace Tasks.Days
             {
                 string fileContent = OpenFile()[0]; // only one line
                 int gotAPresent = RoboSantaCountVisitedHouses(fileContent);
-                Console.WriteLine($"Task 2. The result is: {gotAPresent}");
+                AnnounceResult(1, gotAPresent);
             }
             catch (Exception e)
             {

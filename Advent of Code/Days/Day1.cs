@@ -81,7 +81,7 @@ namespace Tasks.Days
             try
             {
                 int floorNumber = FindFloor();
-                Console.WriteLine("Task 1. The result is: " + floorNumber);
+                AnnounceResult(1, floorNumber);
             }
             catch (Exception e)
             {

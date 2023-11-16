@@ -24,6 +24,15 @@ namespace Tasks.Days
             return File.ReadAllLines(_filePath);
         }
 
+        protected void AnnounceResult(int taskNumber, int result)
+        {
+            Console.WriteLine($"Task {taskNumber}. The result is: {result}");
+        }
+        protected void AnnounceResult(int taskNumber, string result)
+        {
+            Console.WriteLine($"Task {taskNumber}. The result is: {result}");
+        }
+
         public void Execute()
         {
             string dayName = GetType().Name;
